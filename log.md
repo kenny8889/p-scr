@@ -1,5 +1,10 @@
 # Personal SCR Activity Log
 
+## [2026-06-12] outcome | Personal SCR usage guide (docs/)
+- Created/updated: [[docs/personal-scr-usage.md]], [[outcomes/research/2026-06-12-personal-scr-usage-guide.md]], `README.md`, `SCHEMA.md`
+- Summary: Added docs/personal-scr-usage.md; removed obsolete feature/* ruleset workarounds from three docs.
+- Next: Push feature/kenny8889, open PR to develop; @lpcaitt approves before merge.
+
 ## [2026-06-12] outcome | README and SCHEMA PR workflow update
 - Created/updated: [[outcomes/research/2026-06-12-readme-schema-pr-workflow-update.md]], `README.md`, `SCHEMA.md`
 - Summary: Documented feature/kenny8889 → PR → @lpcaitt approval workflow; forbids local merge/push to develop.
