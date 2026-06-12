@@ -1,5 +1,10 @@
 # Personal SCR Activity Log
 
+## [2026-06-12] outcome | develop direct push bypassed code-owner approval
+- Created/updated: [[outcomes/research/2026-06-12-develop-push-bypasses-codeowner-approval.md]]
+- Summary: Documented why local merge + push to develop skipped @lpcaitt; agents must use feature branch + PR only.
+- Next: Enable "Do not allow bypassing" on GitHub; merge this change via PR with @lpcaitt approval.
+
 ## [2026-06-12] outcome | Login feature requirements (PRD)
 - Created/updated: [[outcomes/drafts/2026-06-12-login-requirements.md]]
 - Summary: Draft PRD for account-password login, session management, security controls, API contracts, and acceptance criteria.
