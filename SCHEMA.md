@@ -240,28 +240,33 @@ Valid log types:
 
 When the user says "deliver this to SCR":
 
-1. Run `git pull --ff-only`.
-2. Identify the page type: outcome, handoff, or decision.
-3. Choose the destination folder.
-4. Create a markdown file from the template.
-5. Fill all frontmatter fields.
-6. Write concise, reusable content.
-7. Update `index.md`.
-8. Append to `log.md`.
-9. Commit all related changes together.
-10. Push immediately.
-11. Report the created file path and commit hash.
+1. Run `git pull --ff-only origin develop`.
+2. Checkout `feature/kenny8889`; merge or rebase `develop` if behind.
+3. Identify the page type: outcome, handoff, or decision.
+4. Choose the destination folder.
+5. Create a markdown file from the template.
+6. Fill all frontmatter fields.
+7. Write concise, reusable content.
+8. Update `index.md`.
+9. Append to `log.md`.
+10. Commit all related changes on `feature/kenny8889`.
+11. Push `feature/kenny8889` to origin.
+12. Open a **Pull Request** (`feature/kenny8889` → `develop`).
+13. Wait for **@lpcaitt** approval (`.github/CODEOWNERS` + branch protection).
+14. Merge the PR on GitHub — **do not** locally merge into `develop` and push.
+15. Report the created file path, commit hash, and PR URL.
 
 When updating an existing SCR file:
 
-1. Run `git pull --ff-only`.
-2. Read the current file first.
-3. Preserve useful existing content.
-4. Add a changelog or update the `updated` date.
-5. Update `index.md` if the summary or status changed.
-6. Append to `log.md`.
-7. Commit all related changes together.
-8. Push immediately.
+1. Run `git pull --ff-only origin develop`.
+2. Checkout `feature/kenny8889`; merge or rebase `develop` if behind.
+3. Read the current file first.
+4. Preserve useful existing content.
+5. Add a changelog or update the `updated` date.
+6. Update `index.md` if the summary or status changed.
+7. Append to `log.md`.
+8. Commit on `feature/kenny8889` and push.
+9. Open or update the PR to `develop`; wait for **@lpcaitt** approval before merge.
 
 If Git reports a conflict, stop and ask the user. Do not resolve semantic conflicts silently.
 
@@ -275,15 +280,37 @@ https://github.com/kenny8889/p-scr
 
 Local clone path is `/Users/ouyang/AI-coding/rtadev-platform/p-scr`. Agents must `cd` to the clone root that contains `README.md` and `SCHEMA.md`.
 
-Rules:
+### Branch and review workflow
 
-1. Always run `git pull --ff-only` before reading or writing (from the clone root).
+```text
+develop (pull) → feature/kenny8889 (commit) → push → PR → @lpcaitt approves → merge on GitHub
+```
+
+| Rule | Detail |
+|------|--------|
+| **Working branch** | `feature/kenny8889` only — do not create per-topic `feature/<topic>` branches for SCR. |
+| **Merge target** | `develop` via Pull Request only. |
+| **Required reviewer** | `@lpcaitt` (see `.github/CODEOWNERS`). |
+| **Forbidden** | `git push origin develop` or `git push origin main` from an agent session. |
+| **Forbidden** | Local merge into `develop` then push (bypasses PR and code-owner review). |
+
+If `git push origin feature/kenny8889` fails with **Cannot update this protected ref**, the repo ruleset blocks updates to existing `feature/*` branches. Delete the stale remote branch, then push again to recreate it:
+
+```bash
+git push origin --delete feature/kenny8889
+git push -u origin feature/kenny8889
+```
+
+### General rules
+
+1. Always run `git pull --ff-only origin develop` before reading or writing (from the clone root).
 2. Never write directly without pulling first.
 3. Keep each outcome/handoff/decision plus `index.md` and `log.md` in the same commit.
-4. Push after every successful commit.
-5. If a conflict occurs, stop and ask the user.
-6. Do not use Google Drive or cloud-drive mounts as the authoritative sync layer.
-7. Cite SCR files by **repo-relative paths** (e.g. `handoffs/foo.md`) in handoffs and outcomes, not host-specific absolute paths.
+4. Push `feature/kenny8889` after every successful commit; open a PR to `develop`.
+5. Do not merge to `develop` until **@lpcaitt** has approved the PR.
+6. If a conflict occurs, stop and ask the user.
+7. Do not use Google Drive or cloud-drive mounts as the authoritative sync layer.
+8. Cite SCR files by **repo-relative paths** (e.g. `handoffs/foo.md`) in handoffs and outcomes, not host-specific absolute paths.
 
 ## Relationship to Formal DFOS SCR
 

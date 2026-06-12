@@ -47,30 +47,54 @@ Do not store raw chat transcripts. Store finished, useful outcomes with enough c
 - `assets/` - supporting files referenced by outcomes.
 - `archive/` - retired or superseded material.
 
+## Branch and review workflow
+
+Merges to `develop` (and `main`) require a Pull Request and approval from **@lpcaitt** (`.github/CODEOWNERS`).
+
+```text
+git pull origin develop
+  → commit on feature/kenny8889
+  → git push origin feature/kenny8889
+  → open PR (feature/kenny8889 → develop)
+  → @lpcaitt approves
+  → merge on GitHub
+```
+
+**Agents must not** `git push origin develop` or locally merge into `develop` and push.
+
+Use **`feature/kenny8889`** as the only SCR working branch — do not create per-topic feature branches.
+
+See [[SCHEMA#git-sync-rules]] for full rules, including what to do if push to `feature/kenny8889` is blocked by repository rulesets.
+
 ## Required Agent Behavior
 
 When asked to "deliver this to SCR":
 
 1. `cd` to the **personal-scr clone root** (this repo).
-2. Run `git pull --ff-only` first.
-3. Create a markdown file using the closest template.
-4. Put it in the right folder under `outcomes/` or `handoffs/`.
-5. Add or update an entry in `index.md`.
-6. Append a short event to `log.md`.
-7. Commit all related changes together.
-8. Push immediately.
-9. If Git reports a conflict, stop and ask the user.
+2. Run `git pull --ff-only origin develop`.
+3. Checkout `feature/kenny8889`; merge `develop` if behind.
+4. Create a markdown file using the closest template.
+5. Put it in the right folder under `outcomes/` or `handoffs/`.
+6. Add or update an entry in `index.md`.
+7. Append a short event to `log.md`.
+8. Commit all related changes on `feature/kenny8889`.
+9. Push `feature/kenny8889` and open a PR to `develop`.
+10. Wait for **@lpcaitt** approval; merge the PR on GitHub.
+11. Report the file path (relative to repo root), commit hash, and PR URL.
+12. If Git reports a conflict, stop and ask the user.
 
 ## Agent Sync Rules
 
-1. Always run `git pull --ff-only` before reading or writing (from the clone root).
+1. Always run `git pull --ff-only origin develop` before reading or writing (from the clone root).
 2. Never write directly without pulling first.
-3. After creating/updating an SCR file, update `index.md` and append `log.md`.
-4. Commit all related changes together.
-5. Push immediately after commit.
-6. If Git reports a conflict, stop and ask the user.
-7. Do not store secrets, private keys, passwords, recovery phrases, or sensitive customer data.
-8. Do not rely on Google Drive or other cloud mounts for sync — use this Git repo only.
+3. Commit on `feature/kenny8889` only; do not create other `feature/<topic>` branches for SCR.
+4. After creating/updating an SCR file, update `index.md` and append `log.md`.
+5. Commit all related changes together; push `feature/kenny8889`.
+6. Open a PR to `develop`; do not push directly to `develop` or `main`.
+7. Wait for **@lpcaitt** to approve before merging the PR.
+8. If Git reports a conflict, stop and ask the user.
+9. Do not store secrets, private keys, passwords, recovery phrases, or sensitive customer data.
+10. Do not rely on Google Drive or other cloud mounts for sync — use this Git repo only.
 
 ## How to Ask Agents to Deliver to SCR
 
@@ -84,13 +108,15 @@ Local clone: /Users/ouyang/AI-coding/rtadev-platform/p-scr
 
 cd /Users/ouyang/AI-coding/rtadev-platform/p-scr
 Follow SCHEMA.md.
-Before writing, run git pull --ff-only.
+Before writing, run git pull --ff-only origin develop.
+Checkout feature/kenny8889 and merge develop if behind.
 Use the closest template in templates/.
 Save the file under the right outcomes/ subfolder.
 Update index.md.
 Append an entry to log.md.
-Commit all related changes and push.
-Then tell me the created file path (relative to repo root) and commit hash.
+Commit on feature/kenny8889, push, and open a PR to develop.
+Wait for @lpcaitt approval before merging the PR on GitHub.
+Then tell me the created file path (relative to repo root), commit hash, and PR URL.
 ```
 
 For a handoff to another agent or device:
@@ -105,7 +131,9 @@ cd /Users/ouyang/AI-coding/rtadev-platform/p-scr
 Follow SCHEMA.md.
 Before writing, run git pull --ff-only.
 The handoff must include mission, current state, read-first files, constraints, definition of done, and open questions.
-Save it under handoffs/, update index.md, append to log.md, commit, push, and report the file path and commit hash.
+Save it under handoffs/, update index.md, append to log.md.
+Commit on feature/kenny8889, push, open PR to develop, wait for @lpcaitt approval, merge on GitHub.
+Report the file path, commit hash, and PR URL.
 ```
 
 ## How to Ask Agents to Retrieve from SCR

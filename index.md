@@ -2,6 +2,8 @@
 
 ## Research
 
+- [[outcomes/research/2026-06-12-readme-schema-pr-workflow-update.md]] - README/SCHEMA aligned to feature/kenny8889 → PR → @lpcaitt → develop merge | status: active | updated: 2026-06-12
+- [[outcomes/research/2026-06-12-develop-push-bypasses-codeowner-approval.md]] - Why direct push to develop skipped @lpcaitt; correct PR-only agent workflow | status: active | updated: 2026-06-12
 - [[outcomes/research/2026-06-12-github-branch-protection-main-develop.md]] - Branch protection + CODEOWNERS (@lpcaitt) for main/develop merge approval | status: active | updated: 2026-06-12
 - [[outcomes/research/2026-06-11-p-scr-setup-and-usage.md]] - Personal SCR repo setup, local path, and pre-commit workflow | status: active | updated: 2026-06-11
 
