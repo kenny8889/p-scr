@@ -294,13 +294,6 @@ develop (pull) → feature/kenny8889 (commit) → push → PR → @lpcaitt appro
 | **Forbidden** | `git push origin develop` or `git push origin main` from an agent session. |
 | **Forbidden** | Local merge into `develop` then push (bypasses PR and code-owner review). |
 
-If `git push origin feature/kenny8889` fails with **Cannot update this protected ref**, the repo ruleset blocks updates to existing `feature/*` branches. Delete the stale remote branch, then push again to recreate it:
-
-```bash
-git push origin --delete feature/kenny8889
-git push -u origin feature/kenny8889
-```
-
 ### General rules
 
 1. Always run `git pull --ff-only origin develop` before reading or writing (from the clone root).

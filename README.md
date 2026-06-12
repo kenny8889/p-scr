@@ -64,7 +64,7 @@ git pull origin develop
 
 Use **`feature/kenny8889`** as the only SCR working branch — do not create per-topic feature branches.
 
-See [[SCHEMA#git-sync-rules]] for full rules, including what to do if push to `feature/kenny8889` is blocked by repository rulesets.
+See [[SCHEMA#git-sync-rules]] for full rules.
 
 ## Required Agent Behavior
 
