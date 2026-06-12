@@ -41,14 +41,14 @@ Removed obsolete `feature/*` update ruleset references from:
 Deliver this to my Personal SCR as an outcome before I commit the code repo.
 Local clone: /Users/ouyang/AI-coding/rtadev-platform/p-scr
 Follow SCHEMA.md, pull develop first, commit on feature/kenny8889, update index.md and log.md,
-open PR to develop, wait for @lpcaitt approval, then report file path, commit hash, and PR URL.
+open PR to develop, wait for @kenny8889 approval, then report file path, commit hash, and PR URL.
 ```
 
 Branch names in prompts are **examples**; each user should align with their updated `README.md` / `SCHEMA.md` (see guide §2).
 
 ## Next Actions
 
-- Merge PR to `develop` after @lpcaitt approves.
+- Merge PR to `develop` after @kenny8889 approves.
 - New team members: read `docs/personal-scr-usage.md` → update README/SCHEMA → use §3 prompts.
 
 ## Links

@@ -23,10 +23,10 @@ The `p-scr` repo uses `.github/CODEOWNERS` to declare who must approve PRs targe
 `.github/CODEOWNERS`:
 
 ```text
-*   @lpcaitt
+*   @kenny8889
 ```
 
-All paths require approval from `@lpcaitt` before merge when **Require review from Code Owners** is enabled.
+All paths require approval from `@kenny8889` before merge when **Require review from Code Owners** is enabled.
 
 ### Required GitHub settings (per branch: `main`, `develop`)
 
@@ -73,7 +73,7 @@ Repeat for `develop`. Replace `OWNER/REPO` with `kenny8889/p-scr`.
 ```text
 PR → target main/develop
   → branch protection: PR required + N approvals
-  → code owners: @lpcaitt must approve (if enabled)
+  → code owners: @kenny8889 must approve (if enabled)
   → merge allowed
 ```
 
@@ -92,13 +92,13 @@ PR → target main/develop
 ## Changelog
 
 - **2026-06-12 (initial):** Documented branch protection setup; CODEOWNERS pointed to `@kenny8889`.
-- **2026-06-12 (update):** CODEOWNERS reviewer changed to `@lpcaitt`; comment aligned with owner line.
+- **2026-06-12 (update):** CODEOWNERS reviewer changed to `@kenny8889`; comment aligned with owner line.
 
 ## Next Actions
 
 - Commit `.github/CODEOWNERS` change to `develop`.
 - Apply or verify branch protection rules on GitHub for `main` and `develop`.
-- Test with a PR: merge stays blocked until `@lpcaitt` approves.
+- Test with a PR: merge stays blocked until `@kenny8889` approves.
 
 ## Links
 

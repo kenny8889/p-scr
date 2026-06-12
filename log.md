@@ -3,31 +3,31 @@
 ## [2026-06-12] outcome | Personal SCR usage guide (docs/)
 - Created/updated: [[docs/personal-scr-usage.md]], [[outcomes/research/2026-06-12-personal-scr-usage-guide.md]], `README.md`, `SCHEMA.md`
 - Summary: Added docs/personal-scr-usage.md; removed obsolete feature/* ruleset workarounds from three docs.
-- Next: Push feature/kenny8889, open PR to develop; @lpcaitt approves before merge.
+- Next: Push feature/kenny8889, open PR to develop; @kenny8889 approves before merge.
 
 ## [2026-06-12] outcome | README and SCHEMA PR workflow update
 - Created/updated: [[outcomes/research/2026-06-12-readme-schema-pr-workflow-update.md]], `README.md`, `SCHEMA.md`
-- Summary: Documented feature/kenny8889 → PR → @lpcaitt approval workflow; forbids local merge/push to develop.
-- Next: Push feature/kenny8889, open/update PR; @lpcaitt approves before merge to develop.
+- Summary: Documented feature/kenny8889 → PR → @kenny8889 approval workflow; forbids local merge/push to develop.
+- Next: Push feature/kenny8889, open/update PR; @kenny8889 approves before merge to develop.
 
 ## [2026-06-12] update | SCR delivery branch standardized to feature/kenny8889
 - Created/updated: [[outcomes/research/2026-06-12-develop-push-bypasses-codeowner-approval.md]]
 - Summary: Moved outcome to feature/kenny8889; deleted feature/develop-pr-workflow-outcome; all future SCR uses feature/kenny8889 → PR → develop.
-- Next: Push feature/kenny8889 and open PR; @lpcaitt approves before merge.
+- Next: Push feature/kenny8889 and open PR; @kenny8889 approves before merge.
 
 ## [2026-06-12] outcome | develop direct push bypassed code-owner approval
 - Created/updated: [[outcomes/research/2026-06-12-develop-push-bypasses-codeowner-approval.md]]
-- Summary: Documented why local merge + push to develop skipped @lpcaitt; agents must use feature branch + PR only.
-- Next: Enable "Do not allow bypassing" on GitHub; merge this change via PR with @lpcaitt approval.
+- Summary: Documented why local merge + push to develop skipped @kenny8889; agents must use feature branch + PR only.
+- Next: Enable "Do not allow bypassing" on GitHub; merge this change via PR with @kenny8889 approval.
 
 ## [2026-06-12] outcome | Login feature requirements (PRD)
 - Created/updated: [[outcomes/drafts/2026-06-12-login-requirements.md]]
 - Summary: Draft PRD for account-password login, session management, security controls, API contracts, and acceptance criteria.
 - Next: Resolve open questions (account type, JWT vs session); implement in code repo after sign-off.
 
-## [2026-06-12] update | CODEOWNERS reviewer changed to @lpcaitt
+## [2026-06-12] update | CODEOWNERS reviewer changed to @kenny8889
 - Created/updated: [[outcomes/research/2026-06-12-github-branch-protection-main-develop.md]], `.github/CODEOWNERS`
-- Summary: Updated branch-protection outcome and CODEOWNERS to require @lpcaitt approval on main/develop PRs.
+- Summary: Updated branch-protection outcome and CODEOWNERS to require @kenny8889 approval on main/develop PRs.
 - Next: Merge to develop; verify branch protection and test PR approval flow on GitHub.
 
 ## [2026-06-12] outcome | GitHub branch protection for main/develop
