@@ -252,7 +252,7 @@ When the user says "deliver this to SCR":
 10. Commit all related changes on `feature/kenny8889`.
 11. Push `feature/kenny8889` to origin.
 12. Open a **Pull Request** (`feature/kenny8889` → `develop`).
-13. Wait for **@lpcaitt** approval (`.github/CODEOWNERS` + branch protection).
+13. Wait for **@kenny8889** approval (`.github/CODEOWNERS` + branch protection).
 14. Merge the PR on GitHub — **do not** locally merge into `develop` and push.
 15. Report the created file path, commit hash, and PR URL.
 
@@ -266,7 +266,7 @@ When updating an existing SCR file:
 6. Update `index.md` if the summary or status changed.
 7. Append to `log.md`.
 8. Commit on `feature/kenny8889` and push.
-9. Open or update the PR to `develop`; wait for **@lpcaitt** approval before merge.
+9. Open or update the PR to `develop`; wait for **@kenny8889** approval before merge.
 
 If Git reports a conflict, stop and ask the user. Do not resolve semantic conflicts silently.
 
@@ -283,14 +283,14 @@ Local clone path is `/Users/ouyang/AI-coding/rtadev-platform/p-scr`. Agents must
 ### Branch and review workflow
 
 ```text
-develop (pull) → feature/kenny8889 (commit) → push → PR → @lpcaitt approves → merge on GitHub
+develop (pull) → feature/kenny8889 (commit) → push → PR → @kenny8889 approves → merge on GitHub
 ```
 
 | Rule | Detail |
 |------|--------|
 | **Working branch** | `feature/kenny8889` only — do not create per-topic `feature/<topic>` branches for SCR. |
 | **Merge target** | `develop` via Pull Request only. |
-| **Required reviewer** | `@lpcaitt` (see `.github/CODEOWNERS`). |
+| **Required reviewer** | `@kenny8889` (see `.github/CODEOWNERS`). |
 | **Forbidden** | `git push origin develop` or `git push origin main` from an agent session. |
 | **Forbidden** | Local merge into `develop` then push (bypasses PR and code-owner review). |
 
@@ -300,7 +300,7 @@ develop (pull) → feature/kenny8889 (commit) → push → PR → @lpcaitt appro
 2. Never write directly without pulling first.
 3. Keep each outcome/handoff/decision plus `index.md` and `log.md` in the same commit.
 4. Push `feature/kenny8889` after every successful commit; open a PR to `develop`.
-5. Do not merge to `develop` until **@lpcaitt** has approved the PR.
+5. Do not merge to `develop` until **@kenny8889** has approved the PR.
 6. If a conflict occurs, stop and ask the user.
 7. Do not use Google Drive or cloud-drive mounts as the authoritative sync layer.
 8. Cite SCR files by **repo-relative paths** (e.g. `handoffs/foo.md`) in handoffs and outcomes, not host-specific absolute paths.

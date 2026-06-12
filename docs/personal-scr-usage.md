@@ -13,7 +13,7 @@
 
 ## 一、GitHub 开启分支审批
 
-Personal SCR 的合并流程要求：所有进入 `develop` / `main` 的变更必须经过 **Pull Request**，并由 **@lpcaitt** 审批（见 `.github/CODEOWNERS`）。
+Personal SCR 的合并流程要求：所有进入 `develop` / `main` 的变更必须经过 **Pull Request**，并由 **@kenny8889** 审批（见 `.github/CODEOWNERS`）。
 
 需要配置三层机制，缺一不可：
 
@@ -31,11 +31,11 @@ CODEOWNERS（指定审批人）
 
 ```text
 # 所有提交到 develop 或 main 分支的 PR，
-# 都必须由 @lpcaitt 审批通过，才能合并
-*   @lpcaitt
+# 都必须由 @kenny8889 审批通过，才能合并
+*   @kenny8889
 ```
 
-含义：任意路径的 PR，只要目标是 `develop` 或 `main`，都需要 @lpcaitt 作为 Code Owner 审批。
+含义：任意路径的 PR，只要目标是 `develop` 或 `main`，都需要 @kenny8889 作为 Code Owner 审批。
 
 > CODEOWNERS **只作用于 Pull Request**，不能阻止直接 `git push` 到受保护分支。必须配合下面的分支保护规则。
 
@@ -54,7 +54,7 @@ CODEOWNERS（指定审批人）
 | Dismiss stale approvals when new commits are pushed | ✅ 建议开启 |
 | **Do not allow bypassing the above settings** | ✅ **强烈建议开启（含 Admin）** |
 
-最后一项很关键：若不开启，仓库 Admin 仍可直推 `develop`，绕过 @lpcaitt 审批。
+最后一项很关键：若不开启，仓库 Admin 仍可直推 `develop`，绕过 @kenny8889 审批。
 
 ### 1.3 审批流程示意
 
@@ -65,7 +65,7 @@ git push origin feature/kenny8889
         ↓
 在 GitHub 开 PR：feature/kenny8889 → develop
         ↓
-@lpcaitt Review 并 Approve
+@kenny8889 Review 并 Approve
         ↓
 在 GitHub 上 Merge PR（不要本地 merge develop 再 push）
         ↓
@@ -93,7 +93,7 @@ develop 更新完成
 - **审批人可能不同** — `.github/CODEOWNERS` 中的 reviewer 需与团队实际角色一致。
 - **本机克隆路径不同** — 每台机器上的本地路径各异，Agent 需要明确路径才能 `cd` 到正确目录。
 
-> Agent 交付时以 **`README.md` 和 `SCHEMA.md` 中的最新配置为准**，不要硬记本文中的示例值。本文档中的 `feature/kenny8889`、`develop`、`@lpcaitt` 仅为**当前仓库的示例**。
+> Agent 交付时以 **`README.md` 和 `SCHEMA.md` 中的最新配置为准**，不要硬记本文中的示例值。本文档中的 `feature/kenny8889`、`develop`、`@kenny8889` 仅为**当前仓库的示例**。
 
 ### 2.1 先确认你的个人配置项
 
@@ -104,7 +104,7 @@ develop 更新完成
 | **本地克隆路径** | Agent `cd` 的目录 | `/Users/ouyang/AI-coding/rtadev-platform/p-scr` |
 | **个人 feature 分支** | 所有 SCR commit 的工作分支 | `feature/kenny8889` |
 | **PR 目标分支** | 合并 SCR 的远程分支 | `develop` |
-| **审批人** | CODEOWNERS 指定的 GitHub 用户 | `@lpcaitt` |
+| **审批人** | CODEOWNERS 指定的 GitHub 用户 | `@kenny8889` |
 | **远程仓库** | GitHub 仓库 URL | `https://github.com/kenny8889/p-scr` |
 
 ### 2.2 需要更新 README.md 的位置
@@ -125,12 +125,12 @@ develop 更新完成
 # 改前（他人示例）
 Checkout feature/kenny8889 and merge develop if behind.
 Commit on feature/kenny8889, push, and open a PR to develop.
-Wait for @lpcaitt approval ...
+Wait for @kenny8889 approval ...
 
 # 改后（你的配置）
 Checkout feature/lpcaitt and merge develop if behind.
 Commit on feature/lpcaitt, push, and open a PR to develop.
-Wait for @lpcaitt approval ...
+Wait for @kenny8889 approval ...
 ```
 
 若 PR 目标是 `main` 而非 `develop`，把所有 `develop` 替换为你的目标分支，并把 `git pull --ff-only origin develop` 改为 `git pull --ff-only origin main`。
@@ -159,7 +159,7 @@ Wait for @lpcaitt approval ...
 
 ### 2.4 同步更新 .github/CODEOWNERS（如审批人不同）
 
-若你的审批人不是 `@lpcaitt`，还需修改 [.github/CODEOWNERS](../.github/CODEOWNERS)：
+若你的审批人不是 `@kenny8889`，还需修改 [.github/CODEOWNERS](../.github/CODEOWNERS)：
 
 ```text
 # 所有提交到 <目标分支> 的 PR，都必须由 @你的审批人 审批通过，才能合并
@@ -205,7 +205,7 @@ Wait for @lpcaitt approval ...
 5. git commit（在 feature/kenny8889 上）
 6. git push origin feature/kenny8889
 7. 开 PR → develop
-8. 等 @lpcaitt Approve
+8. 等 @kenny8889 Approve
 9. 在 GitHub Merge PR
 10. 再去提交你的代码仓库
 ```
@@ -231,7 +231,7 @@ Save the file under the right outcomes/ subfolder.
 Update index.md.
 Append an entry to log.md.
 Commit on feature/kenny8889, push, and open a PR to develop.
-Wait for @lpcaitt approval before merging the PR on GitHub.
+Wait for @kenny8889 approval before merging the PR on GitHub.
 Then tell me the created file path (relative to repo root), commit hash, and PR URL.
 ```
 
@@ -243,7 +243,7 @@ Then tell me the created file path (relative to repo root), commit hash, and PR 
 Deliver this to my Personal SCR as an outcome before I commit the code repo.
 Local clone: /Users/ouyang/AI-coding/rtadev-platform/p-scr
 Follow SCHEMA.md, pull develop first, commit on feature/kenny8889, update index.md and log.md,
-open PR to develop, wait for @lpcaitt approval, then report file path, commit hash, and PR URL.
+open PR to develop, wait for @kenny8889 approval, then report file path, commit hash, and PR URL.
 ```
 
 ### 3.5 Handoff 提示词（交给下一个 Agent）
@@ -261,7 +261,7 @@ Checkout feature/kenny8889 and merge develop if behind.
 The handoff must include mission, current state, read-first files, constraints,
 definition of done, and open questions.
 Save it under handoffs/, update index.md, append to log.md.
-Commit on feature/kenny8889, push, open PR to develop, wait for @lpcaitt approval, merge on GitHub.
+Commit on feature/kenny8889, push, open PR to develop, wait for @kenny8889 approval, merge on GitHub.
 Report the file path, commit hash, and PR URL.
 ```
 
@@ -289,7 +289,7 @@ Cite which SCR files you used (paths relative to repo root).
 | Commit hash | `562e480...` |
 | PR 链接 | `https://github.com/kenny8889/p-scr/pull/3` |
 
-你需要做的：通知或等待 **@lpcaitt** 在 PR 上 Approve，PR 合并后再去提交代码仓库。
+你需要做的：通知或等待 **@kenny8889** 在 PR 上 Approve，PR 合并后再去提交代码仓库。
 
 ### 3.8 文件存放位置速查
 
@@ -315,7 +315,7 @@ A：检查 `README.md` 和 `SCHEMA.md` 是否已更新；交付提示词应与 R
 A：不能。只在 GitHub PR 合并时更新 `develop`。
 
 **Q：PR 合并不了，提示 Waiting on code owner review？**  
-A：正常，需 @lpcaitt 在 PR 页面点 **Approve**。
+A：正常，需 @kenny8889 在 PR 页面点 **Approve**。
 
 **Q：Admin 能跳过审批吗？**  
 A：若未开启 "Do not allow bypassing"，Admin 可以直推。建议开启该选项。

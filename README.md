@@ -49,14 +49,14 @@ Do not store raw chat transcripts. Store finished, useful outcomes with enough c
 
 ## Branch and review workflow
 
-Merges to `develop` (and `main`) require a Pull Request and approval from **@lpcaitt** (`.github/CODEOWNERS`).
+Merges to `develop` (and `main`) require a Pull Request and approval from **@kenny8889** (`.github/CODEOWNERS`).
 
 ```text
 git pull origin develop
   → commit on feature/kenny8889
   → git push origin feature/kenny8889
   → open PR (feature/kenny8889 → develop)
-  → @lpcaitt approves
+  → @kenny8889 approves
   → merge on GitHub
 ```
 
@@ -79,7 +79,7 @@ When asked to "deliver this to SCR":
 7. Append a short event to `log.md`.
 8. Commit all related changes on `feature/kenny8889`.
 9. Push `feature/kenny8889` and open a PR to `develop`.
-10. Wait for **@lpcaitt** approval; merge the PR on GitHub.
+10. Wait for **@kenny8889** approval; merge the PR on GitHub.
 11. Report the file path (relative to repo root), commit hash, and PR URL.
 12. If Git reports a conflict, stop and ask the user.
 
@@ -91,7 +91,7 @@ When asked to "deliver this to SCR":
 4. After creating/updating an SCR file, update `index.md` and append `log.md`.
 5. Commit all related changes together; push `feature/kenny8889`.
 6. Open a PR to `develop`; do not push directly to `develop` or `main`.
-7. Wait for **@lpcaitt** to approve before merging the PR.
+7. Wait for **@kenny8889** to approve before merging the PR.
 8. If Git reports a conflict, stop and ask the user.
 9. Do not store secrets, private keys, passwords, recovery phrases, or sensitive customer data.
 10. Do not rely on Google Drive or other cloud mounts for sync — use this Git repo only.
@@ -115,7 +115,7 @@ Save the file under the right outcomes/ subfolder.
 Update index.md.
 Append an entry to log.md.
 Commit on feature/kenny8889, push, and open a PR to develop.
-Wait for @lpcaitt approval before merging the PR on GitHub.
+Wait for @kenny8889 approval before merging the PR on GitHub.
 Then tell me the created file path (relative to repo root), commit hash, and PR URL.
 ```
 
@@ -132,7 +132,7 @@ Follow SCHEMA.md.
 Before writing, run git pull --ff-only.
 The handoff must include mission, current state, read-first files, constraints, definition of done, and open questions.
 Save it under handoffs/, update index.md, append to log.md.
-Commit on feature/kenny8889, push, open PR to develop, wait for @lpcaitt approval, merge on GitHub.
+Commit on feature/kenny8889, push, open PR to develop, wait for @kenny8889 approval, merge on GitHub.
 Report the file path, commit hash, and PR URL.
 ```
 

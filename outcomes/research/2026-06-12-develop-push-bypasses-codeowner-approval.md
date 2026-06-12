@@ -7,14 +7,14 @@ agent: "Cursor Composer"
 project: "p-scr"
 tags: [github, branch-protection, codeowners, workflow, develop]
 sensitivity: internal
-source: "Cursor chat — why direct push to develop skipped @lpcaitt approval"
+source: "Cursor chat — why direct push to develop skipped @kenny8889 approval"
 ---
 
-# Why Direct Push to develop Bypassed @lpcaitt Approval
+# Why Direct Push to develop Bypassed @kenny8889 Approval
 
 ## Context
 
-After delivering the login PRD outcome, changes landed on `origin/develop` without a PR or review from `@lpcaitt`, despite `.github/CODEOWNERS` requiring that owner. The user asked why the approval gate was skipped.
+After delivering the login PRD outcome, changes landed on `origin/develop` without a PR or review from `@kenny8889`, despite `.github/CODEOWNERS` requiring that owner. The user asked why the approval gate was skipped.
 
 ## Outcome
 
@@ -47,7 +47,7 @@ So a rule **exists**, but the pushing account **bypassed** it.
 
 ```text
 Intended path:
-  feature branch → PR to develop → @lpcaitt approves → GitHub Merge
+  feature branch → PR to develop → @kenny8889 approves → GitHub Merge
 
 What actually happened:
   feature branch → local merge → direct push develop (admin bypass)
@@ -62,7 +62,7 @@ What actually happened:
 3. Add outcome + update `index.md` and `log.md`; commit on `feature/kenny8889`.
 4. `git push origin feature/kenny8889`.
 5. Open a **Pull Request** (`feature/kenny8889` → `develop`).
-6. Wait for **@lpcaitt** approval (CODEOWNERS + branch protection).
+6. Wait for **@kenny8889** approval (CODEOWNERS + branch protection).
 7. Merge the PR on GitHub — **do not** locally merge into `develop` and push.
 
 ### GitHub settings to enforce (repo Admin)
@@ -80,7 +80,7 @@ Without the last item, admins can still direct-push to `develop`, which defeats 
 
 ### Operational rules for this repo
 
-> **Never `git push origin develop` from an agent session.** Always commit on `feature/kenny8889`, open PR to `develop`, and wait for @lpcaitt approval.
+> **Never `git push origin develop` from an agent session.** Always commit on `feature/kenny8889`, open PR to `develop`, and wait for @kenny8889 approval.
 
 > **Do not create new `feature/<topic>` branches for SCR delivery.** Reuse `feature/kenny8889` only.
 
@@ -92,11 +92,11 @@ Without the last item, admins can still direct-push to `develop`, which defeats 
 
 - Repo admin: confirm **Do not allow bypassing** is enabled on `main` and `develop`.
 - Agents: commit on `feature/kenny8889` only; open PR to `develop`; report PR URL after push.
-- Optional: test with a small PR to verify merge stays blocked until @lpcaitt approves.
+- Optional: test with a small PR to verify merge stays blocked until @kenny8889 approves.
 
 ## Links
 
-- `.github/CODEOWNERS` — `* @lpcaitt`
+- `.github/CODEOWNERS` — `* @kenny8889`
 - Related: [[outcomes/research/2026-06-12-github-branch-protection-main-develop.md]]
 - Related: [[outcomes/drafts/2026-06-12-login-requirements.md]] (delivered via direct push — example of bypass)
 - Remote: https://github.com/kenny8889/p-scr
