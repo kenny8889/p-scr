@@ -5,7 +5,7 @@ created: 2026-06-12
 updated: 2026-06-12
 agent: "Cursor Composer"
 project: "p-scr"
-tags: [github, branch-protection, code-review, workflow]
+tags: [github, branch-protection, code-review, workflow, codeowners]
 sensitivity: internal
 source: "Cursor chat — GitHub merge approval for main/develop"
 ---
@@ -14,19 +14,19 @@ source: "Cursor chat — GitHub merge approval for main/develop"
 
 ## Context
 
-The `p-scr` repo already has `.github/CODEOWNERS` assigning `@kenny8889` as the required reviewer for all paths. CODEOWNERS alone does not block merges — GitHub **branch protection rules** (or **rulesets**) must also be enabled on `main` and `develop`.
+The `p-scr` repo uses `.github/CODEOWNERS` to declare who must approve PRs targeting `main` or `develop`. CODEOWNERS alone does not block merges — GitHub **branch protection rules** (or **rulesets**) must also be enabled on those branches.
 
 ## Outcome
 
-### What is already in the repo
+### Current CODEOWNERS (pending commit)
 
 `.github/CODEOWNERS`:
 
 ```text
-*   @kenny8889
+*   @lpcaitt
 ```
 
-This declares who must approve PRs, but enforcement requires branch protection.
+All paths require approval from `@lpcaitt` before merge when **Require review from Code Owners** is enabled.
 
 ### Required GitHub settings (per branch: `main`, `develop`)
 
@@ -73,9 +73,15 @@ Repeat for `develop`. Replace `OWNER/REPO` with `kenny8889/p-scr`.
 ```text
 PR → target main/develop
   → branch protection: PR required + N approvals
-  → code owners: @kenny8889 must approve (if enabled)
+  → code owners: @lpcaitt must approve (if enabled)
   → merge allowed
 ```
+
+### Operational notes (from prior push attempts)
+
+- Direct push to `feature/*` may be blocked by repository rulesets.
+- Merging locally into `develop` and pushing `develop` succeeded when admin bypass applied.
+- Prefer PR workflow for feature branches when rules require it.
 
 ### Notes
 
@@ -83,11 +89,16 @@ PR → target main/develop
 - If the PR author is the sole code owner, consider requiring 2 approvals or disallowing self-approval.
 - Org repos may inherit rules from **Organization Settings → Rules**; check there if repo-level rules seem ignored.
 
+## Changelog
+
+- **2026-06-12 (initial):** Documented branch protection setup; CODEOWNERS pointed to `@kenny8889`.
+- **2026-06-12 (update):** CODEOWNERS reviewer changed to `@lpcaitt`; comment aligned with owner line.
+
 ## Next Actions
 
-- Apply branch protection rules on GitHub for `main` and `develop` (UI or `gh`).
-- Verify with a test PR: merge button should stay disabled until `@kenny8889` approves.
-- Then commit any pending code-repo changes.
+- Commit `.github/CODEOWNERS` change to `develop`.
+- Apply or verify branch protection rules on GitHub for `main` and `develop`.
+- Test with a PR: merge stays blocked until `@lpcaitt` approves.
 
 ## Links
 

@@ -1,5 +1,10 @@
 # Personal SCR Activity Log
 
+## [2026-06-12] update | CODEOWNERS reviewer changed to @lpcaitt
+- Created/updated: [[outcomes/research/2026-06-12-github-branch-protection-main-develop.md]], `.github/CODEOWNERS`
+- Summary: Updated branch-protection outcome and CODEOWNERS to require @lpcaitt approval on main/develop PRs.
+- Next: Merge to develop; verify branch protection and test PR approval flow on GitHub.
+
 ## [2026-06-12] outcome | GitHub branch protection for main/develop
 - Created/updated: [[outcomes/research/2026-06-12-github-branch-protection-main-develop.md]]
 - Summary: Documented how to enforce PR approval on main/develop using branch protection plus existing CODEOWNERS.
