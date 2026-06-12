@@ -1,5 +1,10 @@
 # Personal SCR Activity Log
 
+## [2026-06-12] outcome | README and SCHEMA PR workflow update
+- Created/updated: [[outcomes/research/2026-06-12-readme-schema-pr-workflow-update.md]], `README.md`, `SCHEMA.md`
+- Summary: Documented feature/kenny8889 → PR → @lpcaitt approval workflow; forbids local merge/push to develop.
+- Next: Push feature/kenny8889, open/update PR; @lpcaitt approves before merge to develop.
+
 ## [2026-06-12] update | SCR delivery branch standardized to feature/kenny8889
 - Created/updated: [[outcomes/research/2026-06-12-develop-push-bypasses-codeowner-approval.md]]
 - Summary: Moved outcome to feature/kenny8889; deleted feature/develop-pr-workflow-outcome; all future SCR uses feature/kenny8889 → PR → develop.
