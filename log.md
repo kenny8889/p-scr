@@ -1,5 +1,10 @@
 # Personal SCR Activity Log
 
+## [2026-06-12] update | SCR delivery branch standardized to feature/kenny8889
+- Created/updated: [[outcomes/research/2026-06-12-develop-push-bypasses-codeowner-approval.md]]
+- Summary: Moved outcome to feature/kenny8889; deleted feature/develop-pr-workflow-outcome; all future SCR uses feature/kenny8889 → PR → develop.
+- Next: Push feature/kenny8889 and open PR; @lpcaitt approves before merge.
+
 ## [2026-06-12] outcome | develop direct push bypassed code-owner approval
 - Created/updated: [[outcomes/research/2026-06-12-develop-push-bypasses-codeowner-approval.md]]
 - Summary: Documented why local merge + push to develop skipped @lpcaitt; agents must use feature branch + PR only.

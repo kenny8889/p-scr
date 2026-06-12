@@ -55,11 +55,13 @@ What actually happened:
 
 ### Correct workflow for agents (SCR delivery)
 
+**Standard branch:** `feature/kenny8889` — do not create per-topic feature branches for SCR.
+
 1. `git pull --ff-only` on `develop`.
-2. Create or use a **feature branch** (e.g. `feature/<topic>`).
-3. Add outcome + update `index.md` and `log.md`; commit on the feature branch.
-4. `git push -u origin feature/<topic>`.
-5. Open a **Pull Request** targeting `develop`.
+2. Checkout `feature/kenny8889`; merge or rebase `develop` if behind.
+3. Add outcome + update `index.md` and `log.md`; commit on `feature/kenny8889`.
+4. `git push origin feature/kenny8889`.
+5. Open a **Pull Request** (`feature/kenny8889` → `develop`).
 6. Wait for **@lpcaitt** approval (CODEOWNERS + branch protection).
 7. Merge the PR on GitHub — **do not** locally merge into `develop` and push.
 
@@ -76,14 +78,20 @@ On `main` and `develop`, enable:
 
 Without the last item, admins can still direct-push to `develop`, which defeats the approval requirement.
 
-### Operational rule for this repo
+### Operational rules for this repo
 
-> **Never `git push origin develop` from an agent session.** Always use feature branch + PR + @lpcaitt approval.
+> **Never `git push origin develop` from an agent session.** Always commit on `feature/kenny8889`, open PR to `develop`, and wait for @lpcaitt approval.
+
+> **Do not create new `feature/<topic>` branches for SCR delivery.** Reuse `feature/kenny8889` only.
+
+## Changelog
+
+- **2026-06-12:** Initial outcome; SCR delivery branch standardized to `feature/kenny8889` (no per-topic feature branches).
 
 ## Next Actions
 
 - Repo admin: confirm **Do not allow bypassing** is enabled on `main` and `develop`.
-- Agents: use PR workflow only; report PR URL after push.
+- Agents: commit on `feature/kenny8889` only; open PR to `develop`; report PR URL after push.
 - Optional: test with a small PR to verify merge stays blocked until @lpcaitt approves.
 
 ## Links
