@@ -1,5 +1,10 @@
 # Personal SCR Activity Log
 
+## [2026-06-12] outcome | Login feature requirements (PRD)
+- Created/updated: [[outcomes/drafts/2026-06-12-login-requirements.md]]
+- Summary: Draft PRD for account-password login, session management, security controls, API contracts, and acceptance criteria.
+- Next: Resolve open questions (account type, JWT vs session); implement in code repo after sign-off.
+
 ## [2026-06-12] update | CODEOWNERS reviewer changed to @lpcaitt
 - Created/updated: [[outcomes/research/2026-06-12-github-branch-protection-main-develop.md]], `.github/CODEOWNERS`
 - Summary: Updated branch-protection outcome and CODEOWNERS to require @lpcaitt approval on main/develop PRs.

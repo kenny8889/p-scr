@@ -19,7 +19,7 @@ _(none yet)_
 
 ## Drafts
 
-_(none yet)_
+- [[outcomes/drafts/2026-06-12-login-requirements.md]] - Login feature PRD: account-password auth, session, security, API, acceptance criteria | status: draft | updated: 2026-06-12
 
 ## Code Review
 
