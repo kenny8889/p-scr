@@ -1,5 +1,10 @@
 # Personal SCR Activity Log
 
+## [2026-06-12] outcome | CODEOWNERS reviewer @kenny8889 (PR #5 merged)
+- Created/updated: [[outcomes/research/2026-06-12-codeowners-reviewer-kenny8889.md]]
+- Summary: Documented that @kenny8889 is now required approver for develop/main PRs after PR #5 merge.
+- Next: SCR deliveries use feature/kenny8889 → PR → @kenny8889 approval.
+
 ## [2026-06-12] outcome | Personal SCR usage guide (docs/)
 - Created/updated: [[docs/personal-scr-usage.md]], [[outcomes/research/2026-06-12-personal-scr-usage-guide.md]], `README.md`, `SCHEMA.md`
 - Summary: Added docs/personal-scr-usage.md; removed obsolete feature/* ruleset workarounds from three docs.
