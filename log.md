@@ -1,5 +1,10 @@
 # Personal SCR Activity Log
 
+## [2026-06-12] outcome | Solo maintainer PR approval and Admin bypass
+- Created/updated: [[outcomes/research/2026-06-12-solo-maintainer-pr-approval-bypass.md]]
+- Summary: Documented why @kenny8889 cannot self-approve own PRs; Admin can merge via branch-protection bypass.
+- Next: Confirm Admin bypass setting; optional FAQ update in docs/personal-scr-usage.md.
+
 ## [2026-06-12] outcome | CODEOWNERS reviewer @kenny8889 (PR #5 merged)
 - Created/updated: [[outcomes/research/2026-06-12-codeowners-reviewer-kenny8889.md]]
 - Summary: Documented that @kenny8889 is now required approver for develop/main PRs after PR #5 merge.
