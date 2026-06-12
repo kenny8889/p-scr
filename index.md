@@ -2,6 +2,7 @@
 
 ## Research
 
+- [[outcomes/research/2026-06-12-solo-maintainer-pr-approval-bypass.md]] - Solo maintainer: PR author cannot self-approve; Admin bypass merge workflow | status: active | updated: 2026-06-12
 - [[outcomes/research/2026-06-12-codeowners-reviewer-kenny8889.md]] - CODEOWNERS reviewer @kenny8889 effective after PR #5; future PR approval rule | status: active | updated: 2026-06-12
 - [[outcomes/research/2026-06-12-personal-scr-usage-guide.md]] - Usage guide in docs/; GitHub branch approval, per-user README/SCHEMA, Agent prompts | status: active | updated: 2026-06-12
 - [[docs/personal-scr-usage.md]] - Personal SCR 使用指南（GitHub 开启分支审批 → 配置 README/SCHEMA → Agent 提示词） | status: active | updated: 2026-06-12
